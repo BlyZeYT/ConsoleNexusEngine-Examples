@@ -95,23 +95,23 @@ public sealed class SnakeGame : ConsoleGame
         var gamepad = inputs.Gamepads[0].Buttons;
         var keyboard = inputs.Keys;
 
-        if (gamepad.IsPressed(NexusXInput.DirectionalPadRight)
-            || keyboard.Contains(NexusKey.Right)
+        if ((gamepad.IsPressed(NexusXInput.DirectionalPadRight)
+            || keyboard.Contains(NexusKey.Right))
             && !currentDirection.HasDirection(NexusDirection.Left))
             currentDirection = NexusDirection.Right;
 
-        if (gamepad.IsPressed(NexusXInput.DirectionalPadLeft)
-            || keyboard.Contains(NexusKey.Left)
+        if ((gamepad.IsPressed(NexusXInput.DirectionalPadLeft)
+            || keyboard.Contains(NexusKey.Left))
             && !currentDirection.HasDirection(NexusDirection.Right))
             currentDirection = NexusDirection.Left;
 
-        if (gamepad.IsPressed(NexusXInput.DirectionalPadUp)
-            || keyboard.Contains(NexusKey.Up)
+        if ((gamepad.IsPressed(NexusXInput.DirectionalPadUp)
+            || keyboard.Contains(NexusKey.Up))
             && !currentDirection.HasDirection(NexusDirection.Down))
             currentDirection = NexusDirection.Up;
 
-        if (gamepad.IsPressed(NexusXInput.DirectionalPadDown)
-            || keyboard.Contains(NexusKey.Down)
+        if ((gamepad.IsPressed(NexusXInput.DirectionalPadDown)
+            || keyboard.Contains(NexusKey.Down))
             && !currentDirection.HasDirection(NexusDirection.Up))
             currentDirection = NexusDirection.Down;
 
